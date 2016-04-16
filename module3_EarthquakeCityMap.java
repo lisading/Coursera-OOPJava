@@ -90,8 +90,9 @@ public class EarthquakeCityMap extends PApplet {
 	    int red = color(255, 0, 0);
 	    int blue = color(0, 0, 255);
 
-	    for(int i = 0; i< earthquakes.size(); i++){
-	    	PointFeature pointFeature = earthquakes.get(i);
+			for(PointFeature pointFeature : earthquakes){
+	    	PointFeature f = earthquakes.get(0);
+	    	System.out.println(f.getProperties());
 	    	SimplePointMarker m = new SimplePointMarker(pointFeature.getLocation());
 	    	Object magObj = pointFeature.getProperty("magnitude");
 	    	float mag = Float.parseFloat(magObj.toString());
