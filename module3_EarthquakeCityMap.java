@@ -77,10 +77,10 @@ public class EarthquakeCityMap extends PApplet {
 	    // These print statements show you (1) all of the relevant properties
 	    // in the features, and (2) how to get one property and use it
 	    //if (earthquakes.size() > 0) {
-	    	//PointFeature f = earthquakes.get(0);
-	    	//System.out.println(f.getProperties());
-	    	//Object magObj = f.getProperty("magnitude");
-	    	//float mag = Float.parseFloat(magObj.toString());
+	    //	PointFeature f = earthquakes.get(0);
+	    //	System.out.println(f.getProperties());
+	    //	Object magObj = f.getProperty("magnitude");
+	    //	float mag = Float.parseFloat(magObj.toString());
 	    	// PointFeatures also have a getLocation method
 	    //}
 
@@ -90,13 +90,14 @@ public class EarthquakeCityMap extends PApplet {
 	    int red = color(255, 0, 0);
 	    int blue = color(0, 0, 255);
 
-			for(PointFeature pointFeature : earthquakes){
+	    for(PointFeature pointFeature : earthquakes){
 	    	PointFeature f = earthquakes.get(0);
 	    	System.out.println(f.getProperties());
 	    	Object magObj = pointFeature.getProperty("magnitude");
 	    	float mag = Float.parseFloat(magObj.toString());
 
-	    	SimplePointMarker m = new SimplePointMarker(pointFeature.getLocation());
+	    	SimplePointMarker m = createMarker(pointFeature);
+	    	//SimplePointMarker m = new SimplePointMarker(pointFeature.getLocation());
 
 	    	int color = 0;
 	    	float radius = 0;
@@ -128,11 +129,11 @@ public class EarthquakeCityMap extends PApplet {
 	// A suggested helper method that takes in an earthquake feature and
 	// returns a SimplePointMarker for that earthquake
 	// TODO: Implement this method and call it from setUp, if it helps
-	//private SimplePointMarker createMarker(PointFeature feature)
-	//{
+	private SimplePointMarker createMarker(PointFeature feature)
+	{
 		// finish implementing and use this method, if it helps.
-	//	return new SimplePointMarker(feature.getLocation());
-	//}
+		return new SimplePointMarker(feature.getLocation());
+	}
 
 	public void draw() {
 	    background(10);
