@@ -98,12 +98,12 @@ public class EarthquakeCityMap extends PApplet {
 
 	    	int color = 0;
 	    	float radius = 0;
-	    	if (mag < 4.0)
+	    	if (mag < THRESHOLD_LIGHT)
 	    	{
 	    		color = blue;
 	    		radius = 5;
 	    	}
-	    	else if (mag < 5.0)
+	    	else if (mag < THRESHOLD_MODERATE)
 	    	{
 	    		color = yellow;
 	    		radius = 10;
