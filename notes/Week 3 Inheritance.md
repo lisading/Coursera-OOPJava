@@ -1,8 +1,8 @@
 # Week 3 Inheritance
 
-##### Those contents are learning notes from Coursera [Object Oriented Programming in Java](https://www.coursera.org/learn/object-oriented-java), offered by UC San Diego.   
-##### Instructors: Mia Minners, Leo Porter, Christine Alvarado.    
-##### Author: Lisa Ding
+Those contents are learning notes from Coursera [Object Oriented Programming in Java](https://www.coursera.org/learn/object-oriented-java), offered by UC San Diego.   
+Instructors: Mia Minners, Leo Porter, Christine Alvarado.    
+Author: Lisa Ding
 
 <br>
 
@@ -317,10 +317,10 @@ Step 2: Runtime environment executes interpreted code
 
 ##### Casting
 
-- Automatic type promotion 自动类型转换 (like `int` to `double`)
+- Automatic type promotion (like `int` to `double`)
 	- Superclass ref = new Subclass( ) widening
 
-- Explicit casting 强制类型转换 (like `double` to `int`)
+- Explicit casting (like `double` to `int`)
 	- Subclass ref = (Subclass) superRef;  narrowing
 
 	Person s = new Student (“Cara”, 1234);
